@@ -12,12 +12,10 @@ double method(double start_num, int iteration) {
     double x = start_num;
 
 
-    for (i = 0; i < iteration; i++)
-    {
+    for (i = 0; i < iteration; i++) {
         x = x - (f(x)/fdash(x));
 
-		if (f(x) == 0)
-		{
+		if (f(x) == 0) {
 			printf("\nExact solution found: iteration %d\n", i);
 			return x;
 		}

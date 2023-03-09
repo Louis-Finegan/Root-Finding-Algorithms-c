@@ -1,5 +1,7 @@
 # Root Finding Algorithms in the c programming language
 
+Writen in Linux Ubuntu 20.04.2 LTS.
+
 ## Algorithms
 
 1. Bisection Method.
@@ -10,55 +12,75 @@
 
 4. Fixed Point Method.
 
-### Bisection Method
+## Example Case:
+
+Let $f(x) = 3x^2 - 2x +6$. The value can $x$ such that $f(x)=0$ was calculated by the above algorithms.
 
 
-### False Position Method
+## Results
 
 
-### Newton Raphson Method
+<pre><code>
+	STARTING PROGRAM
+
+	File Names:
+	1. bisection-method.c
+	2. false-position-method.c
+	3. fixed-point-iteration-method.c
+	4. newton-raphson-method.c
+
+	Were Compiled
+	
+	Running applications:
 
 
-### Fixed Point Method
+	---STARTING BISECTION METHOD---
+
+	Enter an a: -1
+	Enter a b:  0
+	Enter the number of iterations: 100
+
+	Bisection Method: Solution is -0.290994
+	initial interval: [-1.000000, 0.000000]
+ 	number of iterations is: 100
+
+	---ENDING BISECTION METHOD---
+
+	---STARTING FALSE POSITION METHOD---
+
+	Enter an a: -1
+	Enter a b:  0
+	Enter the number of iterations: 100
+
+	False Position Method: Solution is -0.290994
+	initial interval: [-1.000000, 0.000000]
+	 number of iterations is: 100
+
+	---ENDING FALSE POSITION METHOD---
+
+	---STARTING FIXED POINT ITERATION---
+
+	Enter an initial guess: 0
+
+	Enter a tolerance:  0.00001
+	Enter the maximum number of iterations: 1000
+
+	Fixed Point Iteration: Solution is -0.290995
+
+	---ENDING FIXED POINT ITERATION---
+
+	---STARTING NEWTOW RAPHSON METHOD---
+
+	Enter an initial guess: 0
+	Enter the number of iterations: 100
+
+	Newton Raphson Method: Solution is -0.290994
+	number of iterations is: 100
+
+	---ENDING NEWTON RAPHSON METHOD---
+
+	ENDING PROGRAM
+</code></pre>
 
 
-### Example Problem
 
-
-
-## How to use
-
-1.
-
-2.
-
-## Directory Structure
-
-   `./
-	|__ build
-
-	|		|__ bisection-method
-  
-	|		|__ newton-raphson-method
-
-	|		|__ false-position-method
-
-	|		|__ fixed-point-method
-
-	|
-
-	|__ compile-run.sh
-
-	|
-
-	|__ src
-
-		  |__ bisection-method.c
-
-		  |__ false-position-method.c
-
-		  |__ fixed-point-method.c
-
-		  |__ newton-raphson-method.c
-
-	`

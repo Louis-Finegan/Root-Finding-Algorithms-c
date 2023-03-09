@@ -6,19 +6,16 @@ double f(double x);
 
 double g(double x);
 
-double method(double start_num, double tolerance, int max_iterations)
-{
+double method(double start_num, double tolerance, int max_iterations) {
 	double x = start_num;
 	double error = tolerance + 1;
 	int i;
 
-	while (i < max_iterations && error > tolerance) 
-	{
+	while (i < max_iterations && error > tolerance) {
         double x_next = g(x);
         error = fabs(x_next - x);
 
-		if ( f(x) == 0 )
-		{
+		if ( f(x) == 0 ) {
 			printf("Exact solution found: iteration %d", i);
 			return x;
 		}
@@ -36,13 +33,11 @@ double method(double start_num, double tolerance, int max_iterations)
 	return x;
 }
 
-double f(double x) 
-{
+double f(double x) {
     return 3*pow(x, 2) - 6*x - 2;
 }
 
-double g(double x)
-{
+double g(double x) {
 	return 2/(3*x - 6);
 }
 

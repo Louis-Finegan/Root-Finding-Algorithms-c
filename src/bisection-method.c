@@ -4,51 +4,39 @@
 double f(double x);
 
 // Bisection method
-double method(double a, double b, int iteration) 
-{
-    if (f(a)*f(b) >= 0) 
-	{
+double method(double a, double b, int iteration) {
+    if (f(a)*f(b) >= 0) {
         printf("\nThere is no root in this interval\n");
 	}
 
     double c;
     int i;
 
-    for (i=1; i<iteration; i++) 
-	{
+    for (i=1; i<iteration; i++) {
         c = (a + b)/2;
 
-		if (f(a)*f(c) < 0) 
-		{
+		if (f(a)*f(c) < 0) {
 	    		b = c;
-	        } 
-		else if (f(b)*f(c) < 0) 
-		{
+	    } else if (f(b)*f(c) < 0) {
 	    		a = c;
-        	}
-		else if (f(c) == 0) 
-		{
+        } else if (f(c) == 0) {
 	    		printf("\nExact Solution Found: iteration %d\n", i);
 			return c;
-		} 
-		else 
-		{
+		} else {
 	    		printf("\nBisection Method Failed\n");
 			break;
-	    	}
+	    }
 	}
     return c;
 }
 
 // Example function
-double f(double x) 
-{
+double f(double x) {
     return 3*pow(x, 2) - 6*x - 2;
 }
 
 // prints solution
-int main () 
-{
+int main () {
     double a;
     double b;
     int iteration;

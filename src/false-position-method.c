@@ -5,36 +5,26 @@ double f(double x);
 
 
 // False position method
-double method(double a, double b, int iteration) 
-{
+double method(double a, double b, int iteration) {
 	
-	if ( f(a)*f(b) > 0 ) 
-	{
+	if ( f(a)*f(b) > 0 ) {
 		printf("\nThere is no root in this interval\n");
 	}
 
 	int i;
 	double c;
 
-	for (i=1; i<iteration; i++) 
-	{
+	for (i=1; i<iteration; i++) {
 		c = b - f(b)*((b - a)/(f(b) - f(a)));
 
-		if ( f(c)*f(b) > 0 ) 
-		{
+		if ( f(c)*f(b) > 0 ) {
 			b = c;
-		}
-		else if ( f(a)*f(c) > 0 ) 
-		{
+		} else if ( f(a)*f(c) > 0 ) {
 			a = c;
-		}
-		else if ( f(c) == 0 ) 
-		{
+		} else if ( f(c) == 0 ) {
 			printf("\nExact solution found: iteration %d\n", i);
 			return c;
-		}
-		else 
-		{
+		} else {
 			printf("\nFalse Position Failed\n");
 			break;
 		}
@@ -43,15 +33,13 @@ double method(double a, double b, int iteration)
 }
 
 // Example function
-double f(double x)
-{
+double f(double x) {
 	return 3*pow(x, 2) - 6*x - 2;
 }
 
 
 // prints solution
-int main ()
-{
+int main () {
     double a;
     double b;
     int iteration;

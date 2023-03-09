@@ -56,7 +56,7 @@ for files in $BUILD*; do
 
 APPS=("${APPS[@]}" "$files")
 
-chmod 111 $files
+chmod 711 $files
 
 done
 
