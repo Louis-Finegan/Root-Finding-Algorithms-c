@@ -1,1 +1,4 @@
-*
+build/bisection-method
+build/false-position-method
+build/fixed-point-iteration-method
+build/newton-raphson-method 
