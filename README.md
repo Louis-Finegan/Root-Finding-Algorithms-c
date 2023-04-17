@@ -16,6 +16,15 @@ Writen in Linux Ubuntu 20.04.2 LTS.
 
 Let $f(x) = 3x^2 - 2x +6$. The value can $x$ such that $f(x)=0$ was calculated by the above algorithms.
 
+## How to use
+
+1. Run the following command in the terminal:
+
+<pre><code>
+	./run.sh
+</code></pre>
+
+2. Enter in the required quantities in the different fields until the program finshes.
 
 ## Results
 
